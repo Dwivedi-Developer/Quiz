@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Scoreboard = ({ score, totalQuestions, onRetry }) => {
+const Scoreboard = ({ score, totalQuestions, onRetry, answerHistory  }) => {
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
@@ -50,13 +50,14 @@ const Scoreboard = ({ score, totalQuestions, onRetry }) => {
         Your Score: {score} / {totalQuestions}
       </p>
       <div className="flex flex-wrap justify-center gap-2 mt-6">
-        {Array.from({ length: totalQuestions }).map((_, index) => (
-          <div
-            key={index}
-            className={`w-10 h-10 flex items-center justify-center rounded-full text-white font-bold text-sm shadow-md ${
-              index < score ? "bg-green-500" : "bg-red-500"
-            }`}
-          >
+        
+          {answerHistory.map((record, index) => (
+            <div
+              key={index}
+              className={`w-10 h-10 flex items-center justify-center rounded-full text-white font-bold text-sm shadow-md ${
+                record.isCorrect ? "bg-green-500" : "bg-red-500"
+              }`}
+            >
             {index + 1}
           </div>
         ))}

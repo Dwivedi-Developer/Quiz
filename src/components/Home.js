@@ -13,11 +13,12 @@ const Home = () => {
 
         <div className="bg-gray-200 p-4 rounded-lg text-left">
           <h2 className="text-xl font-semibold mb-2">Instructions:</h2>
-          <ul className="list-disc list-inside text-gray-700">
+          <ul className="list-disc list-outside text-gray-700 pl-4">
             <li>For multiple-choice questions, select the one best answer (A, B, C, or D).</li>
+            <li><span className="font-bold">NOTE-</span> This test is unidirectional i.e once you move to next question can not come back.</li>
             <li>For integer-type questions, write your numerical answer clearly.</li>
             <li>No calculators unless specified.</li>
-            <li>You have <span className="font-bold">30 minutes</span> to complete this quiz.</li>
+            <li>You have <span className="font-bold">30 seconds per question</span> to answer.</li>
           </ul>
         </div>
 

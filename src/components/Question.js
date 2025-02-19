@@ -33,7 +33,7 @@ const Question = ({ question, selectedAnswer, questionIndex, onAnswer, timeUp })
       setSelectedOption(null);
       setSubmitted(false);
       setIsCorrect(null);
-    }, 1000);
+    }, 700);
   };
 
   return (
