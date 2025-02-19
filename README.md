@@ -1,6 +1,6 @@
 Deploy Link - https://dacoidquiz.netlify.app/
 
-Run Repository on your local system by this command - git clone <repository-url>
+Run Repository on your local system by this command - git clone https://github.com/Dwivedi-Developer/Quiz.git
 
 
 📌 Features of the Quiz App
